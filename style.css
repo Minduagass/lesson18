@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  background-color: #f0f4e5;
+}
+
+.section-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* header */
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 3rem;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-self: center;
+  font-size: 1.2rem;
+}
+
+.reservation-btn {
+  all: unset;
+  padding: 1.5rem 3rem;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.reservation-btn:hover {
+  background-color: rgb(46, 46, 46);
+}
+
+.burger-btn {
+  all: unset;
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.burger-btn a img {
+  width: 30px;
+  height: 30px;
+}
+
+/* hero */
+
+.hero-section h1 {
+  font-size: clamp(1.5rem, 5vw, 4.5rem);
+  text-align: center;
+  margin: 0 auto;
+  padding: 5rem;
+  width: 80%;
+}
+
+.hero-section img {
+  width: 100%;
+  padding: 3rem;
+}
+
+/* chef story section */
+
+.chef-story-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
+}
+
+.chef-story-section img {
+  width: clamp(400px, 50vw, 600px);
+  justify-self: end;
+}
+
+.chef-story-section p {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  padding-top: 6rem;
+}
+
+/* ramen section */
+
+.ramen-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
+}
+
+.ramen-section img {
+  width: clamp(400px, 50vw, 600px);
+  padding-bottom: 3rem;
+}
+
+.ramen-section p {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  padding-top: 6rem;
+}
+
+/* reservation section */
+
+.reservation-section {
+  position: relative;
+}
+
+.reservation-section img {
+  width: 100%;
+  padding: 3rem;
+  display: block;
+}
+
+.reservation-section h2 {
+  padding-bottom: 2rem;
+  font-size: clamp(3rem, 3vw, 6rem);
+}
+
+.reservation-section div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.reservation-button {
+  all: unset;
+  padding: 1.5rem 7rem;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.reservation-button:hover {
+  opacity: 0.7;
+}
+
+/* responsive 768px */
+
+@media (max-width: 768px) {
+  .reservation-btn {
+    display: none;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+
+  .burger-btn {
+    display: block;
+  }
+
+  .hero-section h1 {
+    width: 100%;
+    padding-bottom: 0;
+    padding-top: 2rem;
+  }
+
+  .chef-story-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 3rem;
+  }
+
+  .chef-story-section h2 {
+    text-align: center;
+  }
+
+  .chef-story-section p {
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .chef-story-section img {
+    width: 100%;
+  }
+
+  .ramen-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 3rem;
+  }
+
+  .ramen-section p {
+    text-align: center;
+    padding-top: 3rem;
+    order: 1;
+  }
+
+  .ramen-section img {
+    width: 100%;
+    order: 2;
+    padding-bottom: 2rem;
+  }
+}
