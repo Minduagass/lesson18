@@ -134,7 +134,7 @@ header nav ul {
 
 .reservation-section h2 {
   padding-bottom: 2rem;
-  font-size: clamp(3rem, 3vw, 6rem);
+  font-size: clamp(2rem, 3vw, 6rem);
 }
 
 .reservation-section div {
@@ -142,22 +142,63 @@ header nav ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 
 .reservation-button {
   all: unset;
-  padding: 1.5rem 7rem;
   color: black;
   background-color: white;
   cursor: pointer;
   white-space: nowrap;
   font-weight: 600;
+  padding: clamp(0.6rem, 1.5vw, 1.5rem) clamp(1.2rem, 4vw, 7rem);
 }
 
 .reservation-button:hover {
   opacity: 0.7;
+}
+
+/* footer */
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 3rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer nav ul {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+footer nav {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
+social a {
+  width: 25px;
+  height: 25px;
+}
+
+.social img {
+  width: 25px;
+  height: 25px;
 }
 
 /* responsive 768px */
@@ -223,5 +264,14 @@ header nav ul {
     width: 100%;
     order: 2;
     padding-bottom: 2rem;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .social {
+    justify-content: flex-start;
   }
 }
