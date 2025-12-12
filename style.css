@@ -160,6 +160,10 @@ header nav ul {
   opacity: 0.7;
 }
 
+footer .logo a {
+  text-decoration: none;
+}
+
 /* footer */
 
 footer {
@@ -170,7 +174,6 @@ footer {
 }
 
 footer a {
-  text-decoration: none;
   color: black;
 }
 
@@ -191,7 +194,7 @@ footer nav {
   gap: 0.5rem;
 }
 
-social a {
+.social a {
   width: 25px;
   height: 25px;
 }
